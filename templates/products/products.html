@@ -1,0 +1,35 @@
+
+{% extends 'base.html'%}
+
+{% load static %}
+{% block content %}
+
+
+<h1>welcome to the products page</h1> 
+{% for i in pro %}
+<div>
+     <h2>{{ i.name}}</h2>
+     <p> {{ i.description}} </p>
+     <p> price:${{i.price}} </p>
+      <p> stock: {{ i.stock}} </p>
+</div>
+
+<hr>
+{% load static %}
+<img src="{{ product.image.url }}" />
+
+<img src="{% static 'img/Magnolia_grandiflora_-_flower_1.jpg' %}" style="width:100px">
+
+
+
+{% endfor %}
+
+
+
+{% endblock content %}
+
+
+
+
+<!-- <h1>products pages</h1>
+<p>{{pro}}</p>
